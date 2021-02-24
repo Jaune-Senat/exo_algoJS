@@ -61,9 +61,8 @@
         // Exercice 7
 
         let age = 10
-        let result = "L'enfant de " + age + " ans "
 
-        switch(age){
+        /*switch(age){
             case 6:
                 console.log(result +"est poussin")
                 break
@@ -87,7 +86,24 @@
                 break
             default:
             console.log(result +"n'est pas concerné par ces catégories")
+        }*/
+
+        function checkAge(ageOf){
+            if(5 < ageOf && ageOf <8){
+                console.log("L'enfant qui a " + ageOf + " ans est poussin")
+            }else if(7< ageOf && ageOf <10){
+                console.log("L'enfant qui a " + ageOf + " ans est pupille")
+            }else if(9< ageOf && ageOf <12){
+                console.log("L'enfant qui a " + ageOf + " ans est minime")
+            }else if(ageOf >11){
+                console.log("L'enfant qui a " + ageOf + " ans est cadet")
+            }else{
+                console.log("L'enfant qui a " + ageOf + " ans est trop jeune")
+            }
         }
+
+        checkAge(age)
+
 
         //Exercice 8
 
