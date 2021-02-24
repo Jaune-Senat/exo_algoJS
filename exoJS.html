@@ -125,7 +125,7 @@
         let age2 = 32
         let sexe = "F"
 
-        if(18<age2<35 && sexe == "F"){
+        if(18< age2 <35 && sexe == "F" || age > 20 && sexe == "M"){
             console.log("La personne est imposable")
         } else{
             console.log("La personne n\'est pas imposable")
@@ -144,8 +144,7 @@
         let pieceDeux = Math.floor((rAP - ((billetDix*10) + (billetCinq*5)))/2)
         let pieceUn = Math.floor(rAP-((billetDix*10) + (billetCinq*5) + (pieceDeux*2)))
 
-
-        console.log(billetDix + " billets de 10€, " + billetCinq + "billet de 5€, " + pieceDeux + "pièce de 2€ et " + pieceUn + " pièce de 1€")
+        console.log(billetDix + " billets de 10€, " + billetCinq + " billet de 5€, " + pieceDeux + " pièce de 2€ et " + pieceUn + " pièce de 1€")
 
 
     </script>
