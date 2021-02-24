@@ -46,6 +46,92 @@
 
         console.log(euros)
 
+        // Exercice 6
+
+        let prix = 9.99
+        let quantité = 5
+        let taxe = 0.2
+        let tva = 9.99*0.2
+        let tvaTotal = tva*5
+        let totalHt = 9.99*5
+        let total = (tvaTotal + totalHt).toFixed(2)
+
+        console.log(total)
+
+        // Exercice 7
+
+        let age = 10
+        let result = "L'enfant de " + age + " ans "
+
+        switch(age){
+            case 6:
+                console.log(result +"est poussin")
+                break
+            case 7:
+            console.log(result +"est poussin")
+                break
+            case 8:
+            console.log(result +"est pupille")
+                break
+            case 9:
+            console.log(result +"est pupille")
+                break
+            case 10:
+            console.log(result +"est minime")
+                break
+            case 11:
+            console.log(result +"est minime")
+                break
+            case 12:
+            console.log(result +"cadet")
+                break
+            default:
+            console.log(result +"n'est pas concerné par ces catégories")
+        }
+
+        //Exercice 8
+
+        let table = 8
+
+        for(let i = 1; i<11; i++){
+            console.log(i + " x " + table + " = " + i*table)
+        }
+
+        var i = 0
+
+        while(i<11){
+            console.log(i + " x " + table + " = " + i*table)
+            i++
+        }
+
+        //Exercice 9
+
+        let age2 = 32
+        let sexe = "F"
+
+        if(18<age2<35 && sexe == "F"){
+            console.log("La personne est imposable")
+        } else{
+            console.log("La personne n\'est pas imposable")
+        }
+        
+        //Exercice 10
+
+        let montantAPayer = 152
+        let montantVerse = 200
+        let rAP = montantVerse - montantAPayer
+
+        console.log(rAP)
+
+        let billetDix = Math.floor(rAP/10)
+        let billetCinq = Math.floor((rAP - (billetDix*10))/5)
+        let pieceDeux = Math.floor((rAP - ((billetDix*10) + (billetCinq*5)))/2)
+        let pieceUn = Math.floor(rAP-((billetDix*10) + (billetCinq*5) + (pieceDeux*2)))
+
+
+        console.log(billetDix + " billets de 10€, " + billetCinq + "billet de 5€, " + pieceDeux + "pièce de 2€ et " + pieceUn + " pièce de 1€")
+
+
     </script>
 </body>
 </html>
