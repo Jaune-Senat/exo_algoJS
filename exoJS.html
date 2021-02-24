@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Exercice 1
+
+        let phrase = "Notre formation DL commence aujourd'hui"
+        console.log(phrase.length)
+
+        // Exercice 2
+
+        let split = phrase.split(" ")
+        console.log(split.length)
+
+        // Exercice 3
+
+        console.log(phrase.replace("aujourd'hui", "demain"))
+
+        // Exercice 4
+
+        var phrase2 = "Engage le jeu que je le gagne".toLowerCase()
+        
+        phrase2 = phrase2.split("")
+
+        function palindrome(str){
+            if(str === str.reverse([])){
+                return true
+            }else{
+                false
+            }
+        }
+
+        console.log(palindrome(phrase2))
+
+        // Exercice 5
+
+        let francs = 100
+        let conversion = 6.55957
+        let euros = (francs/conversion).toFixed(2)
+
+        console.log(euros)
+
+    </script>
+</body>
+</html>
