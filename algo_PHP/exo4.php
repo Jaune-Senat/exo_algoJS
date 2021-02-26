@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercice 1</h1>
+    <h1>Exercice 4</h1>
     <strong><p>Ecrire un algorithme permettant de savoir si la phrase "Engage le jeu que je le gagne" est un palindrome.</p></strong>
     
     <h2>Résultat</h2>

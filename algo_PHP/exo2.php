@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercice 1</h1>
+    <h1>Exercice 2</h1>
     <strong><p>Soit la phrase "Notre formation DL commence aujourd'hui".<br>
     Ecrire l'instruction permettant de compter le nombre de mots contenus dans cette phrase.</p></strong>
     

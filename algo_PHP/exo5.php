@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercice 1</h1>
+    <h1>Exercice 5</h1>
     <strong><p>Ecrire un algorithme qui déclare une valeur en francs et qui la convertit en euros.</p></strong>
     
     <h2>Résultat</h2>
@@ -17,7 +17,7 @@
         $convert = 6.55957;
         $euros = $francs/$convert;
 
-        echo $francs . " = " . round($euros, 2) . " €";
+        echo $francs . "F  = " . round($euros, 2) . "€";
     ?>
 </body>
 </html>

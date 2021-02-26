@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercice 1</h1>
+    <h1>Exercice 3</h1>
     <strong><p>Soit la phrase "Notre formation DL commence aujourd'hui".<br>
     Ecrire l'instruction permettant de remplacer le mot "aujourd'hui" par le mot "demain". Afficher l'ancienne et la nouvelle phrase.</p></strong>
     
