@@ -29,10 +29,10 @@
         phrase2 = phrase2.split("")
 
         function palindrome(str){
-            if(str === str.reverse([])){
+            if(str === str.reverse()){
                 return true
             }else{
-                false
+                return false
             }
         }
 
@@ -61,32 +61,6 @@
         // Exercice 7
 
         let age = 10
-
-        /*switch(age){
-            case 6:
-                console.log(result +"est poussin")
-                break
-            case 7:
-            console.log(result +"est poussin")
-                break
-            case 8:
-            console.log(result +"est pupille")
-                break
-            case 9:
-            console.log(result +"est pupille")
-                break
-            case 10:
-            console.log(result +"est minime")
-                break
-            case 11:
-            console.log(result +"est minime")
-                break
-            case 12:
-            console.log(result +"cadet")
-                break
-            default:
-            console.log(result +"n'est pas concerné par ces catégories")
-        }*/
 
         function checkAge(ageOf){
             if(5 < ageOf && ageOf <8){
@@ -146,6 +120,53 @@
 
         console.log(billetDix + " billets de 10€, " + billetCinq + " billet de 5€, " + pieceDeux + " pièce de 2€ et " + pieceUn + " pièce de 1€")
 
+        //Exercice 11
+
+        let tableau = ["Peugeot", "Renault", "BMW", "Mercedes"]
+
+        console.log("Il y a " + tableau.length + " marques de voitures dans le tableau :")
+        console.log(tableau[0])
+        console.log(tableau[1])
+        console.log(tableau[2])
+        console.log(tableau[3])
+
+        //Exercice 12
+
+        let lang = {"Mickaël" : "FRA", "Virgile" : "ESP", "Marie-Claire" :"ENG"}
+        
+            function salute(lang){
+                for(var key in lang){
+                    var language = lang[key]
+                    if(key == "FRA"){
+                        return("Salut Mickaël")
+                    } else if(key == "ESP"){
+                        return("Hola Virgile")
+                    } else if (key == "ENG"){
+                        return("Hello Marie-Claire")
+                    }
+                }
+            }
+
+            console.log(salute(language))
+
+
+        //Exercice 13
+
+        function moyenne(a){
+            var b = a.length,
+                c = 0, i
+                for (i = 0; i<b; i++){
+                    c += Number(a[i])
+                }
+                console.log("La moyenne est de " + (c/b).toFixed(2))
+        }
+
+        moyenne([10, 12, 8, 19, 3, 16, 11, 13, 9])
+
+
+        //Exercice 14
+
+        //Exercice 15
 
     </script>
 </body>
