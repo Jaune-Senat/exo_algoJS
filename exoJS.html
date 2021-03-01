@@ -49,11 +49,11 @@
         // Exercice 6
 
         let prix = 9.99
-        let quantité = 5
+        let quantite = 5
         let taxe = 0.2
         let tva = 9.99*0.2
-        let tvaTotal = tva*5
-        let totalHt = 9.99*5
+        let tvaTotal = tva*quantite
+        let totalHt = prix*quantite
         let total = (tvaTotal + totalHt).toFixed(2)
 
         console.log(total)
@@ -107,64 +107,95 @@
         
         //Exercice 10
 
-        let montantAPayer = 152
-        let montantVerse = 200
-        let rAP = montantVerse - montantAPayer
+        let montantAPayer = 149.25
+        let montantVerse = 2000
+        let rendu = montantVerse - montantAPayer
 
-        console.log(rAP)
+        console.log(rendu)
 
-        let billetDix = Math.floor(rAP/10)
+        /*let billetDix = Math.floor(rAP/10)
         let billetCinq = Math.floor((rAP - (billetDix*10))/5)
         let pieceDeux = Math.floor((rAP - ((billetDix*10) + (billetCinq*5)))/2)
         let pieceUn = Math.floor(rAP-((billetDix*10) + (billetCinq*5) + (pieceDeux*2)))
 
-        console.log(billetDix + " billets de 10€, " + billetCinq + " billet de 5€, " + pieceDeux + " pièce de 2€ et " + pieceUn + " pièce de 1€")
+        console.log(billetDix + " billets de 10€, " + billetCinq + " billet de 5€, " + pieceDeux + " pièce de 2€ et " + pieceUn + " pièce de 1€")*/
+
+        let text = "rendu Monnaie :"
+
+        let tabMoney = [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
+
+        for(let money of tabMoney){
+            let counter = 0
+            while(rendu >= money){
+                counter ++
+                rendu = (rendu - money).toFixed(2)
+            }
+            if (counter > 0){
+                let fiduc = (money >=5) ? "billets" : "pièces"
+                fiduc = (counter<=1) ? fiduc = fiduc.replace("s", "") : fiduc
+            
+                text += counter + " " + fiduc + " de " + money + " € \n"
+            }
+        }
+
+        console.log(text)
 
         //Exercice 11
 
         let tableau = ["Peugeot", "Renault", "BMW", "Mercedes"]
 
         console.log("Il y a " + tableau.length + " marques de voitures dans le tableau :")
-        console.log(tableau[0])
-        console.log(tableau[1])
-        console.log(tableau[2])
-        console.log(tableau[3])
+
+        for(var i = 0; i<tableau.length; i++){
+            console.log(tableau[i])
+        }
 
         //Exercice 12
 
-        let lang = {"Mickaël" : "FRA", "Virgile" : "ESP", "Marie-Claire" :"ENG"}
+        let personnes = [{"Mickael" : "FRA"},{"Virgile" : "ESP"},{"Marie-Claire" : "ENG"}]
+        let salute = {"FRA" : "Salut", "ESP" : "Hola", "ENG" : "Hello"}
+        let str = ""
+
         
-            function salute(lang){
-                for(var key in lang){
-                    var language = lang[key]
-                    if(key == "FRA"){
-                        return("Salut Mickaël")
-                    } else if(key == "ESP"){
-                        return("Hola Virgile")
-                    } else if (key == "ENG"){
-                        return("Hello Marie-Claire")
-                    }
-                }
+
+       /*for(var property in personnes){
+            switch(personnes[property]){
+                case "FRA" : 
+                    console.log("Salut " + property)
+                    break
+                case "ESP" : 
+                console.log("Hola " + property)
+                    break
+                case "ENG": 
+                console.log("Hello " + property)
+                    break
             }
+        }*/
 
-            console.log(salute(language))
-
-
+        for (const prop in personnes){
+            let langue = personnes[prop]
+            if (langue in salute){
+                str += salute[langue] + " " + prop + "\n"
+            }
+        }
+        console.log(str)
+       
         //Exercice 13
 
         function moyenne(a){
             var b = a.length,
                 c = 0, i
                 for (i = 0; i<b; i++){
-                    c += Number(a[i])
+                    c += parseInt(a[i])
                 }
                 console.log("La moyenne est de " + (c/b).toFixed(2))
         }
 
         moyenne([10, 12, 8, 19, 3, 16, 11, 13, 9])
 
-
         //Exercice 14
+
+
 
         //Exercice 15
 
