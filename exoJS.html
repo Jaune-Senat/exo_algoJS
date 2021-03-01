@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
     <script>
         // Exercice 1
 
@@ -152,12 +153,15 @@
 
         //Exercice 12
 
-        let personnes = [{"Mickael" : "FRA"},{"Virgile" : "ESP"},{"Marie-Claire" : "ENG"}]
+        let personnes = [
+        {prenom : "Mickael", langue : "FRA"},
+        {prenom : "Virgile", langue : "ESP"},
+        {prenom : "Marie-Claire", langue : "ENG"}
+        ]
         let salute = {"FRA" : "Salut", "ESP" : "Hola", "ENG" : "Hello"}
         let str = ""
 
-        
-
+    
        /*for(var property in personnes){
             switch(personnes[property]){
                 case "FRA" : 
@@ -172,17 +176,29 @@
             }
         }*/
 
-        for (const prop in personnes){
+       /* for (const prop in personnes){
             let langue = personnes[prop]
             if (langue in salute){
                 str += salute[langue] + " " + prop + "\n"
             }
         }
-        console.log(str)
-       
+        console.log(str)*/
+
+        personnes.sort(function(a,b){
+            if(a.prenom < b.prenom) return -1
+            else if(a.prenom > b.prenom) return 1
+            else return 0
+        })
+
+        for (personne of personnes){
+            let hello = salute[personne.langue]
+            console.log(hello + " " + personne.prenom)
+        }
+        
+        
         //Exercice 13
 
-        function moyenne(a){
+       /* function moyenne(a){
             var b = a.length,
                 c = 0, i
                 for (i = 0; i<b; i++){
@@ -191,11 +207,43 @@
                 console.log("La moyenne est de " + (c/b).toFixed(2))
         }
 
-        moyenne([10, 12, 8, 19, 3, 16, 11, 13, 9])
+        moyenne([10, 12, 8, 19, 3, 16, 11, 13, 9])*/
+
+        let notes = [10, 12, 8, 19, 3, 16, 11, 13, 9]
+        /*let somme = 0
+
+        for (note of notes){
+            somme+=note
+        }
+        let moyenne = (somme/notes.length).toFixed(2)
+
+        console.log("La moyenne est de " + moyenne)*/
+
+        let somme = notes.reduce(function(accumulator,note){
+            return accumulator + note
+        })
+
+        let moyenne = (somme/notes.length).toFixed(2)
+        console.log("La moyenne est de " + moyenne)
 
         //Exercice 14
 
+        /*let bDay = new Date ("1985-01-17") //pour rajouter un format d'heure, on met les double points entre chaque chiffe dans les guillemets comme suit : 8:45:30 pour 8h45mn30s
+        let today = new Date()
 
+        let milisec = today.getTime() - bDay.getTime()
+        let mois = today.getMonth() - bDay.getMonth()
+        if(mois<0){
+            mois = mois+12
+        }
+        console.log("Mickael a " + (milisec/365/24/3600/1000).toFixed(0) + " ans et " + mois + " mois") */
+
+        //version avec moment.js
+        let diffY = moment().diff("1985-01-17", "years")
+        let diffM = moment().diff("1985-01-17", "months")
+        let diffD = moment().diff("1985-01-17", "days")
+
+        console.log(diffY + " " + diffM + " " + diffD)
 
         //Exercice 15
 
