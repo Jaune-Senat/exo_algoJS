@@ -22,7 +22,7 @@
 
         $interval = $dateNaissance->diff($dateActuelle);
 
-        var_dump($interval);
+        //var_dump($interval);
 
         echo "La personne née le " . $dateNaissance->format("d/m/Y") . " à " . $interval->format("%y ans %m mois %d jours");
 
