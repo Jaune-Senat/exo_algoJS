@@ -78,6 +78,5 @@ class Animal{
 }
 
 
-
 // Il est préférable de ne pas avoir deux classes dans le même fichier de code
 // Mickael n'aime pas ça
